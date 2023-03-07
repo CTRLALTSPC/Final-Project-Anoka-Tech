@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Author: Emma Stroyny  
+        Date: 02/17/2023     
+        Filename: index.html
+
+        index.html is the main template file in use for this website
+   -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/main/index.html" rel="stylesheet" />
+    <link href="/main/main.css" rel="stylesheet" />
+
+    <link href="/templates/ct_banner.css" rel="stylesheet" />
+    <link href="/templates/coffeebackground.css" rel="stylesheet" />
+
+    <link href="/main/contact/ct-contact.css" rel="stylesheet" />
+    <title>Example</title>
+</head>
+
+<body>
+    <header>
+        <div id="banner"></div>
+        <h3><a href="/main/index.html">Coffee Truth.</a></h3>
+        <div class="topnav"">
+            <a href="/main/contact/ct-contact.html">Contact Us</a>
+            <a href="/main/coffee-guide/ct-guide.html">Coffee Guide</a>
+            <div class="dropdown">
+                <button class="dropbtn">Articles
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/main/article-content/ct-march2023.html">March 2023</a>
+                    <a href="/main/article-content/ct-february2023.html">Februaruy 2023</a>
+                    <a href="/main/article-content/ct-january2023.html">January 2023</a>
+                </div>
+            </div>
+            <a href="/top-brands/ct-brands.html">Top 5 Brands</a>
+            <a class="active" href="/main/index.html">Home</a>
+        </div>
+
+    </header>
+    <div id="main">
+        <article>
+            <div id="articlebox">
+                <h1>Contact Us!</h1>
+                <div class="container">
+                    <form action="/main/contact/ct-submit.html">
+
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email...">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </article>
+        <nav></nav>
+        <aside>
+            <div id="asidebox">
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+/* 
+    Is used as an import for all article-content css files
+*/
+
+/* ============================================
+	Tablet and Desktop Devices: 481px or more 
+   ============================================
+
+   Page layout in 'flex' for elements */
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 8vh;
+    /* For the invisible box that gives the space between #main and for the ct-banner.css */
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    min-height: calc(100vh - 8vh);
+    margin: 0;
+}
+
+#main>article {
+    flex: 1;
+}
+
+#main>nav,
+#main>aside {
+    flex: 0 0 20vw;
+}
+
+#main>nav {
+    order: -1;
+    /* Order of sections (nav, article, aside ) */
+}
+
+
+/* ===== Article Page Layout ===== */
+
+div#articlebox {
+    width: 60vw;
+    height: 92vh;   /* 100vh - 8vh(header) = 92vh for the rest of the page */
+}
+
+
+/* Aside Page Layout */
+
+div#asidebox {
+    width: auto;
+    height: 92vh;
+    /* 100vh - 8vh(header) = 92vh for the rest of the page */
+    background-color: rgb(199, 199, 199);
+}
+
+aside div#asidebox {
+    color: rgb(46, 46, 46);
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+
+/* Nav Box Inside Content Formatting */
+
+div#navbox {
+    width: auto;
+    height: 92vh;
+    background-color: rgb(199, 199, 199);
+}
+
+#navbox nav ul li {
+    background-color: rgba(243, 243, 243, 0.25);
+    border: solid rgb(243, 243, 243);
+    line-height: 25px;
+
+    text-align: center;
+    margin-right: 10px;
+
+    padding-left: 10px;
+    list-style: none;
+}
+
+#navbox nav ul {
+    margin-left: -1.9em;
+}
+
+#navbox nav p {
+    color: rgb(4, 4, 4);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+
+    margin: 0px;
+    text-align: center;
+
+}
+
+#navbox nav a {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+div#navbox nav {
+    padding: 1em;
+}
+
+#navbox nav a:hover {
+    color: #7f5539;
+    opacity: 0.8;
+}
+
+/* Aside Box Inside Content Formatting */
+
+div#asidebox p {
+    margin: 0px;
+    padding-top: 35px;
+    text-align: center;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+div#asidebox img {
+    width: 20vw;
+    height: 30vh;
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+    border-top: solid white;
+    border-bottom: solid white;
+}
+
+aside p a {
+    color: rgb(76, 80, 80);
+
+}
+
+aside p#cite {
+    text-align: center;
+    font-size: 10px;
+}
+
+/*  Article Inside Formatting */
+
+div#articlebox p {
+    font-size: 14px;
+}
+
+div#articlebox p a {
+    color: black;
+}
+
+div#articlebox p a:hover {
+    color: blue;
+}
+
+
+/* ===============================
+	Mobile Styles up to 480 pixels
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+    /* ================
+        General Styles
+       ================ */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    div#articlebox {
+        
+        width: auto;
+        height: auto;
+    }
+
+    article h1,
+    h4 {
+        margin: 0;
+    }
+
+    article div#articlebox p {
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+
+        color: white;
+    }
+
+
+    /* ==================
+        Image Formatting 
+       ================== */
+
+    div#articlebox img {
+        display: block;
+
+        width: auto;
+        height: 208.4px;
+
+        border: solid white;
+    }
+
+    /* ===================
+        Nav & Aside Bar Formatting 
+       =================== */
+
+    aside {
+        margin: 0px;
+        width: 20vw;
+        height: auto;
+    }
+
+    div#asidebox {
+        width: auto;
+        height: auto;
+    
+    }
+
+    aside div#asidebox {
+        color: rgb(46, 46, 46);
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+
+    nav {
+        margin: 0px;
+        width: 20vw;
+        height: auto;
+
+        display: block;
+        float: left;
+    }
+
+    div#navbox {
+        width: auto;
+        height: 100vh;
+    }
+
+    #navbox nav ul li {
+        font-size: 14px;
+        text-align: center;
+        
+        margin: 0;
+        padding: 5px 8px;
+
+    }
+
+    nav ul {
+        padding-left: 30px;
+        
+    }
+
+    /* ===================
+        Article Formatting
+       =================== */
+       div#articlebox {
+        margin: 0;
+        width: auto;
+        height: auto;
+    
+       }
+}

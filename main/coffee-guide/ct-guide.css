@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* ct-guide.css */
+
+div#articlebox h1 {
+    text-align: center;
+}
+div#articlebox img {
+    margin-top: 20px;
+    margin-left: 11vw;
+
+    height: 400px;
+    width: 500px;
+}

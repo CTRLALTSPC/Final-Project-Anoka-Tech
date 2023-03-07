@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* main.css */
+
+/* ============================================
+	Tablet and Desktop Devices: 481px or more 
+   ============================================
+
+   Page layout in 'flex' for elements */
+
+@media only screen and (min-width: 481px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    #main {
+        display: flex;
+        min-height: calc(100vh - 8vh);
+        margin: 0;
+    }
+
+    #main>article {
+        flex: 1;
+    }
+
+    #main>nav,
+    #main>aside {
+        flex: 0 0 20vw;
+    }
+
+    #main>nav {
+        order: -1;
+    }
+
+
+    /* =================
+        Div box designs 
+       ================= */
+
+    nav {
+        width: 20vw;
+        height: 92vh;
+        background-color: none;
+    }
+
+    /* Article Box */
+    div#articlebox {
+        width: 60vw;
+        height: 92vh;   /* 100vh - 8vh(header) = 92vh for the rest of the page */
+        background-color: #c9beb3;
+
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 30px;
+
+        box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+        border: 3px white solid;
+        border-top: none;
+        border-bottom: none;
+
+    }
+
+    aside div#asidebox {
+        width: 20vw;
+        height: 92vh;   /* 100vh - 8vh(header) = 92vh for the rest of the page */
+    
+        color: rgb(46, 46, 46);
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+
+
+    /* =====================
+        Formatting elements 
+       ===================== */
+
+    header {
+        height: 8vh;
+        /* The invisible box that gives the space between #main */
+    }
+
+    article h1,
+    h4 {
+        margin: 0;
+    }
+
+    h4 {
+        float: right;
+        padding-top: 15px;
+        padding-right: 20px;
+
+
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    h1 {
+        padding-top: 40px;
+
+        text-align: left;
+        padding-left: 20px;
+
+        font-weight: 600;
+    }
+
+    article div#articlebox p {
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+
+        color: white;
+    }
+
+
+    /* ==================
+        Image Formatting 
+       ================== */
+
+    div#articlebox img {
+        display: inline-block;
+
+        width: auto;
+        height: 208.4px;
+
+        border: solid white;
+    }
+}
+
+/* ===============================
+	Mobile Styles up to 480 pixels
+   ===============================
+*/
+@media screen and (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    #main {
+        display: flex;
+        min-height: calc(100vh - 8vh);
+        margin: 0;
+
+    }
+
+    div#articlebox {
+        margin: 0;
+        width: auto;
+        height: auto;
+        /* 100vh - 8vh(header) = 92vh for the rest of the page */
+        background-color: #c9beb3;
+
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 30px;
+
+        box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+        border: 3px white solid;
+        border-top: none;
+        border-bottom: none;
+
+    }
+
+    article h1,
+    h4 {
+        margin: 0;
+    }
+
+    h4 {
+        float: right;
+        padding-top: 50px;
+        padding-right: 20px;
+
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    h1 {
+        padding-top: 90px;
+
+        text-align: left;
+        padding-left: 20px;
+
+        font-weight: 600;
+    }
+
+    article div#articlebox p {
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+
+        color: white;
+    }
+
+
+    /* ==================
+        Image Formatting 
+       ================== */
+
+    div#articlebox img {
+        display: block;
+
+        width: auto;
+        height: 208.4px;
+
+        border: solid white;
+    }
+}
